@@ -33,7 +33,9 @@ h1.textContent = 'New Paradigm';
 header.appendChild(h1);
 subheading.classList.add('subheading');
 subheading.appendChild(createSpan()).textContent = '2423';
+subheading.appendChild(createDiv()).classList.add('separator');
 subheading.appendChild(createSpan()).textContent = 'Supernatural';
+subheading.appendChild(createDiv()).classList.add('separator');
 subheading.appendChild(createSpan()).textContent = 'Closed-lore';
 header.appendChild(subheading);
 
