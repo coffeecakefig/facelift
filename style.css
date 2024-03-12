@@ -192,10 +192,6 @@ blockquote h5,
   border-top: thin solid rgba(var(--white), 0.3);
 }
 
-.subheading > .separator {
-border-color: transparent;
-}
-
 .stitchUserBorder {
   background-image: none;
   border: thin solid rgba(var(--accent), 0.3);
