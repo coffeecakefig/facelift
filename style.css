@@ -189,7 +189,7 @@ blockquote h5,
 
 .separator {
   width: 100%;
-
+  border-top: thin solid rgba(var(--white), 0.3);
 }
 
 .stitchUserBorder {
