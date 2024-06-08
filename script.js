@@ -39,7 +39,12 @@ header.appendChild(subheading);
 
 affiliates.remove();
 
-anotherSave.textContent = 'Out of Character';
+avatars.forEach((avatar) => {
+let div = document.createElement('div');
+div.classList.add('av-wrapper');
+div.appendChild(avatar.cloneNode(true));
+avatar.parentNode.replaceChild(div, avatar);
+});
 
 threads.forEach((thread) => {
 if (thread.childNodes.length === 4) thread.childNodes[2].textContent = ' by ';
@@ -47,12 +52,7 @@ if (thread.childNodes.length === 4) thread.childNodes[2].textContent = ' by ';
 
 recentsRow.forEach((recent) => recent.childNodes[2].textContent = ' by ');
 
-avatars.forEach((avatar) => {
-let div = document.createElement('div');
-div.classList.add('av-wrapper');
-div.appendChild(avatar.cloneNode(true));
-avatar.parentNode.replaceChild(div, avatar);
-});
+
 
 latestPosters.forEach((latestPoster) => {
 const parentElement = latestPoster.closest('.stitchForumRow');
@@ -66,4 +66,5 @@ const accentClass = topicReplier.classList[1];
 parentElement.classList.add(accentClass);
 });
 
+anotherSave.textContent = 'Out of Character';
 specialSave.textContent = 'Claims and Templates';
