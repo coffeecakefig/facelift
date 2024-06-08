@@ -29,16 +29,6 @@ const newDescString = descString.replaceAll('/', '·');
 desc.textContent = newDescString;
 });
 
-anotherSave.textContent = 'Out of Character';
-
-affiliates.remove();
-
-threads.forEach((thread) => {
-if (thread.childNodes.length === 4) thread.childNodes[2].textContent = ' by ';
-});
-
-recentsRow.forEach((recent) => recent.childNodes[2].textContent = ' by ');
-
 h1.textContent = 'New Paradigm';
 header.appendChild(h1);
 subheading.classList.add('subheading');
@@ -46,6 +36,16 @@ subheading.appendChild(createSpan()).textContent = '2424';
 subheading.appendChild(createSpan()).textContent = 'Supernatural';
 subheading.appendChild(createSpan()).textContent = 'Closed-lore';
 header.appendChild(subheading);
+
+affiliates.remove();
+
+anotherSave.textContent = 'Out of Character';
+
+threads.forEach((thread) => {
+if (thread.childNodes.length === 4) thread.childNodes[2].textContent = ' by ';
+});
+
+recentsRow.forEach((recent) => recent.childNodes[2].textContent = ' by ');
 
 avatars.forEach((avatar) => {
 let div = document.createElement('div');
