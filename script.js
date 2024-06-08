@@ -20,6 +20,16 @@ const topicHeadings = document.querySelectorAll('.stitchTopicHeader > b:has(+ .s
 const avatars = document.querySelectorAll('.last-poster-avatar, .starter-avatar');
 const latestPosters = document.querySelectorAll('.sitchForumLatestPoster');
 const topicRepliers = document.querySelectorAll('.stitchTopicReplier');
+const descs = document.querySelectorAll('.stitchPostMain .stitchPostHeader desc');
+const anotherSave = document.querySelector('#stitchCat-3 h1');
+
+descs.forEach((desc) => {
+const descString = desc.textContent;
+const newDescString = descString.replaceAll('/', '·');
+desc.textContent = newDescString;
+});
+
+anotherSave.textContent = 'Out of Character';
 
 threads.forEach((thread) => {
 if (thread.childNodes.length === 4) thread.childNodes[2].textContent = ' by ';
@@ -32,16 +42,10 @@ affiliates.remove();
 h1.textContent = 'New Paradigm';
 header.appendChild(h1);
 subheading.classList.add('subheading');
-subheading.appendChild(createSpan()).textContent = '2423';
-subheading.appendChild(createDiv()).classList.add('separator');
+subheading.appendChild(createSpan()).textContent = '2424';
 subheading.appendChild(createSpan()).textContent = 'Supernatural';
-subheading.appendChild(createDiv()).classList.add('separator');
 subheading.appendChild(createSpan()).textContent = 'Closed-lore';
 header.appendChild(subheading);
-
-boardHeadings.forEach((heading) => heading.appendChild(createDiv()).classList.add('separator'));
-
-topicHeadings.forEach((heading) => heading.appendChild(createDiv()).classList.add('separator'));
 
 avatars.forEach((avatar) => {
 let div = document.createElement('div');
