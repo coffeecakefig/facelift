@@ -31,13 +31,13 @@ desc.textContent = newDescString;
 
 anotherSave.textContent = 'Out of Character';
 
+affiliates.remove();
+
 threads.forEach((thread) => {
 if (thread.childNodes.length === 4) thread.childNodes[2].textContent = ' by ';
 });
 
 recentsRow.forEach((recent) => recent.childNodes[2].textContent = ' by ');
-
-affiliates.remove();
 
 h1.textContent = 'New Paradigm';
 header.appendChild(h1);
